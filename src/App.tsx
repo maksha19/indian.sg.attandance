@@ -3,11 +3,13 @@ import "./App.css";
 import axios from "axios";
 import footerImage from "./footerImage.jpeg";
 import header from "./header.png";
+import classNames from "classnames";
 
 function App() {
   const [registrationId, setRegistrationId] = useState("");
   const [name, setName] = useState("Enter your registration number");
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const inputOnChange = (e: any) => {
     console.log(e);
@@ -15,6 +17,7 @@ function App() {
   };
 
   const submitRequest = async () => {
+    setIsSubmit(true);
     const url =
       "https://script.google.com/macros/s/AKfycbyQstp77AxQ5qyw9yIPcLs67Kf8PAmjkaw_lF5QY6LUIrQYgaQwQLE-cLPzsxQ9zyfV/exec";
     const response = await axios.post(
@@ -30,26 +33,29 @@ function App() {
     if (response.status === 200) {
       const statusCode = response.data.statusCode;
       if (statusCode === "202") {
-        setShowSuccess(true);
-        setInterval(() => {
-          setShowSuccess(false);
-        }, 2000);
+        setTimeout(() => {
+          setShowSuccess(true);
+          setIsSubmit(true);
+        }, 0);
+        return;
       } else if (statusCode === "208") {
         setName("Already Register !");
+        return;
       } else if (statusCode === "404") {
         setName("Record not found !");
       }
-      setInterval(() => {
-        setName("Enter your registration number");
-      }, 2000);
     }
-    setRegistrationId("");
+    setTimeout(() => {
+      setName("Enter your registration number");
+      setIsSubmit(false);
+      setRegistrationId("");
+    }, 3000);
   };
 
   return (
     <div className="container mx-auto grid min-h-screen bg-dark-green">
       <div className="grid justify-items-center">
-        <img src={header} alt="image" />
+        <img src={header} alt="headerImage" />
       </div>
       <div className="grid my-12 grid-cols-6 gap-4 ">
         <div className="col-start-2 col-span-4">
@@ -62,28 +68,30 @@ function App() {
             />
             <div className="flex justify-center">
               <button
-                className="bg-bt-bg-color text-bt-text-color font-bold w-auto py-2 px-4 m-4 rounded"
+                className={classNames(
+                  "text-bt-text-color font-bold w-auto py-2 px-4 m-4 rounded",
+                  isSubmit ? "bg-bt-disabled" : "bg-bt-bg-color"
+                )}
+                type="button"
+                disabled={isSubmit}
                 onClick={() => submitRequest()}
               >
                 Submit
               </button>
             </div>
-            {/* <div className="flex text-white justify-center">
-              <span>{name}</span>
-            </div> */}
           </div>
         </div>
       </div>
       <div className="grid justify-items-center bg-white">
-        <img src={footerImage} alt="image" />
+        <img src={footerImage} alt="footerImage" />
       </div>
       {showSuccess && (
-        <div>
+        <div className="bg-white">
           <div className="container">
             <div className="action">
               <div className="trophy">
                 <svg
-                  fill="#FFD600"
+                  fill="#f9bc60"
                   width="100%"
                   height="100%"
                   viewBox="0 0 24 24"
