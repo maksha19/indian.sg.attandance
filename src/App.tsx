@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
+import footerImage from "./footerImage.jpeg";
+import header from "./header.png";
 
 function App() {
   const [registrationId, setRegistrationId] = useState("");
@@ -36,15 +38,15 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto grid h-screen content-center bg-dark-green">
-      <h1 className="text-3xl text-white  font-black">
-        தேசிய தினத் தமிழ்மொழிப் போட்டிகள்
-      </h1>
-      <span className="block text-xl text-white text-sm font-medium  font-black">
-        By Indian.Sg
-      </span>
+    <div className="container mx-auto grid  h-screen  bg-dark-green">
+      <div>
+        <img src={header} alt="image" />
+      </div>
       <div className="grid my-4 grid-cols-6 gap-4 ">
         <div className="col-start-2 col-span-4">
+          <span className="text-white font-bold">
+            Enter your registration number
+          </span>
           <div className="flex flex-col">
             <input
               className="border-4 my-4 h-12 border-bt-bg-color"
@@ -62,13 +64,9 @@ function App() {
           </div>
         </div>
       </div>
-      {name && (
-        <div>
-          <span className="block text-xl text-white text-sm font-medium font-black">
-            {name}
-          </span>
-        </div>
-      )}
+      <div>
+        <img src={footerImage} alt="image" />
+      </div>
     </div>
   );
 }
