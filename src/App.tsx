@@ -12,7 +12,6 @@ function App() {
   const [isSubmit, setIsSubmit] = useState(false);
 
   const inputOnChange = (e: any) => {
-    console.log(e);
     setRegistrationId(e);
   };
 
