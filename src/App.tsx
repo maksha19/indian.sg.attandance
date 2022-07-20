@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="container mx-auto grid min-h-screen bg-dark-green">
-      <div>
+      <div className="grid justify-items-center">
         <img src={header} alt="image" />
       </div>
       <div className="grid my-12 grid-cols-6 gap-4 ">
@@ -74,7 +74,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-white">
+      <div className="grid justify-items-center bg-white">
         <img src={footerImage} alt="image" />
       </div>
       {showSuccess && (
