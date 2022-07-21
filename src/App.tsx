@@ -68,14 +68,23 @@ function App() {
             <div className="flex justify-center">
               <button
                 className={classNames(
-                  "text-bt-text-color font-bold w-auto py-2 px-4 m-4 rounded",
-                  isSubmit ? "bg-bt-disabled" : "bg-bt-bg-color"
+                  "text-bt-text-color font-bold w-auto py-2 px-4 m-4 rounded bg-bt-bg-color"
                 )}
                 type="button"
                 disabled={isSubmit}
                 onClick={() => submitRequest()}
               >
-                Submit
+                {isSubmit ? (
+                  <div className="loader1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                ) : (
+                  <>Submit</>
+                )}
               </button>
             </div>
           </div>
