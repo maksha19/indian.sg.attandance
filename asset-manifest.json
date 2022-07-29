@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/indian.sg.attendance/static/css/main.783773a2.css",
-    "main.js": "/indian.sg.attendance/static/js/main.74d9119b.js",
+    "main.js": "/indian.sg.attendance/static/js/main.1618ac51.js",
     "static/js/787.d06df960.chunk.js": "/indian.sg.attendance/static/js/787.d06df960.chunk.js",
     "static/media/header.png": "/indian.sg.attendance/static/media/header.120b1f9328f8e6def2ca.png",
     "static/media/footerImage.jpeg": "/indian.sg.attendance/static/media/footerImage.8738e4c12e32cd33f472.jpeg",
     "index.html": "/indian.sg.attendance/index.html",
     "main.783773a2.css.map": "/indian.sg.attendance/static/css/main.783773a2.css.map",
-    "main.74d9119b.js.map": "/indian.sg.attendance/static/js/main.74d9119b.js.map",
+    "main.1618ac51.js.map": "/indian.sg.attendance/static/js/main.1618ac51.js.map",
     "787.d06df960.chunk.js.map": "/indian.sg.attendance/static/js/787.d06df960.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.783773a2.css",
-    "static/js/main.74d9119b.js"
+    "static/js/main.1618ac51.js"
   ]
 }
