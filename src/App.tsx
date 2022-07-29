@@ -18,17 +18,16 @@ function App() {
   const submitRequest = async () => {
     setIsSubmit(true);
     const url =
-      "https://script.google.com/macros/s/AKfycbyQstp77AxQ5qyw9yIPcLs67Kf8PAmjkaw_lF5QY6LUIrQYgaQwQLE-cLPzsxQ9zyfV/exec";
+      "https://script.google.com/macros/s/AKfycbxXVb73hkfx9iOJt1OTjuut_f2SSTjGLpVgcxLaO9p0xc18jpDGfDvxlUKqpdz_TFis/exec";
     const response = await axios.post(
       url,
-      { id: registrationId.toLowerCase() },
+      { id: Number(registrationId) },
       {
         headers: {
           "Content-Type": "text/plain;charset=utf-8",
         },
       }
     );
-
     if (response.status === 200) {
       const statusCode = response.data.statusCode;
       if (statusCode === "202") {
@@ -64,6 +63,7 @@ function App() {
               className="border-4 lowercase my-4 h-12 border-bt-bg-color"
               onChange={(e) => inputOnChange(e.target.value)}
               value={registrationId}
+              type="number"
             />
             <div className="flex justify-center">
               <button
@@ -94,30 +94,32 @@ function App() {
         <img src={footerImage} alt="footerImage" />
       </div>
       {showSuccess && (
-        <div className="bg-white">
-          <div className="container">
-            <div className="action">
-              <div className="trophy">
-                <svg
-                  fill="#f9bc60"
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"></path>
-                </svg>
+        <a href="/">
+          <div className="bg-white">
+            <div className="container">
+              <div className="action">
+                <div className="trophy">
+                  <svg
+                    fill="#f9bc60"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"></path>
+                  </svg>
+                </div>
+                <div className="confetti"></div>
+                <div className="confetti two"></div>
+                <div className="confetti three"></div>
+                <div className="confetti four"></div>
+                <div className="confetti--purple"></div>
+                <div className="confetti--purple two"></div>
+                <div className="confetti--purple three"></div>
+                <div className="confetti--purple four"></div>
               </div>
-              <div className="confetti"></div>
-              <div className="confetti two"></div>
-              <div className="confetti three"></div>
-              <div className="confetti four"></div>
-              <div className="confetti--purple"></div>
-              <div className="confetti--purple two"></div>
-              <div className="confetti--purple three"></div>
-              <div className="confetti--purple four"></div>
             </div>
           </div>
-        </div>
+        </a>
       )}
     </div>
   );
