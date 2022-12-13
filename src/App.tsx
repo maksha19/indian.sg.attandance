@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
-import footerImage from "./footerImage.jpeg";
-import header from "./header.png";
+import footerImage from "./cot_2_footer.png";
+import header from "./cot_2_header.png";
 import classNames from "classnames";
 
 function App() {
   const [registrationId, setRegistrationId] = useState("");
-  const [name, setName] = useState("Enter your registration number");
+  const [name, setName] = useState("Enter your mobile number");
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmit, setIsSubmit] = useState(false);
 
