@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/attendance/static/css/main.724ef7b7.css",
-    "main.js": "/attendance/static/js/main.5c3edd8a.js",
+    "main.css": "/attendance/static/css/main.59e3d93d.css",
+    "main.js": "/attendance/static/js/main.f3c9d3c9.js",
     "static/js/787.d06df960.chunk.js": "/attendance/static/js/787.d06df960.chunk.js",
-    "static/media/AC_logo.png": "/attendance/static/media/AC_logo.17868ca5cca58858b48c.png",
-    "static/media/AC_footer.png": "/attendance/static/media/AC_footer.bc0ba4ec110baccd6580.png",
+    "static/media/COT_1_2023_header.png": "/attendance/static/media/COT_1_2023_header.1e4ea74c2cf154cb330f.png",
+    "static/media/COT_2_2023_footer.png": "/attendance/static/media/COT_2_2023_footer.915f4f882c96e514bac9.png",
     "index.html": "/attendance/index.html",
-    "main.724ef7b7.css.map": "/attendance/static/css/main.724ef7b7.css.map",
-    "main.5c3edd8a.js.map": "/attendance/static/js/main.5c3edd8a.js.map",
+    "main.59e3d93d.css.map": "/attendance/static/css/main.59e3d93d.css.map",
+    "main.f3c9d3c9.js.map": "/attendance/static/js/main.f3c9d3c9.js.map",
     "787.d06df960.chunk.js.map": "/attendance/static/js/787.d06df960.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.724ef7b7.css",
-    "static/js/main.5c3edd8a.js"
+    "static/css/main.59e3d93d.css",
+    "static/js/main.f3c9d3c9.js"
   ]
 }
